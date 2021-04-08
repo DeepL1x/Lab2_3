@@ -46,7 +46,7 @@ struct MaxHeap{
     void siftDown(int i) {
         while (i > -1 && getLeftChild(i) < size()) {
             int max = getLeftChild(i);
-            if (getRightChild(i) < size() && !(q.innerArray[getRightChild(i)] < q.innerArray[getLeftChild(i)]))
+            if (getRightChild(i) > 0 && getRightChild(i) < size() && q.innerArray[getLeftChild(i)] < q.innerArray[getRightChild(i)])
                 max = getRightChild(i);
             if (!(q.innerArray[i] < q.innerArray[max]))
                 return;

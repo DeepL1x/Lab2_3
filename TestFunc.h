@@ -57,7 +57,6 @@ bool testPriorityQueue()
         if (!(myPriorQueue.top() == stlPriorQueue.top()))
         {
             isDataEqual = false;
-            cout << myPriorQueue.top().cookingTime << " " << stlPriorQueue.top().cookingTime;
             cerr << "Comparing failed on iteration " << i << endl << endl;
             break;
         }

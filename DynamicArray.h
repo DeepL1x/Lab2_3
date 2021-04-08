@@ -14,7 +14,7 @@ struct Data { /*Varenyk*/
             return ((2 * cookingTime + thinnessOfDough) < (2 * aSecond.cookingTime + aSecond.thinnessOfDough));
         }
         if (cookingTime == aSecond.cookingTime && thinnessOfDough == aSecond.thinnessOfDough){
-            return thinnessOfDough < aSecond.thinnessOfDough;
+            return 0;
         }
         if (cookingTime == aSecond.cookingTime){
             return thinnessOfDough < aSecond.thinnessOfDough;
