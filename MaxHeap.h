@@ -6,7 +6,7 @@
 #define LAB2_3_MAXq_H
 #include "DynamicArray.h"
 struct MaxHeap{
-    DynamicArray q;
+    DynamicArray q = DynamicArray();
 
     int getParent(int i) {
         if (i == 0)
@@ -35,6 +35,7 @@ struct MaxHeap{
         a = b;
         b = temp;
     }
+
     void siftUp(int i) {
         while (q.innerArray[getParent(i)] < q.innerArray[i]) {
             swap(q.innerArray[i], q.innerArray[getParent(i)]);

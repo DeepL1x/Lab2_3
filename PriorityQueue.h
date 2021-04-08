@@ -13,21 +13,22 @@ struct PriorityQueue{
         heap.siftUp(size() - 1);
     }
 
-    void pop() {
+    Data pop() {
         if (heap.size() == 0){
-            std::cout << "Queue underflow" << std::endl;
+//            std::cout << "Queue underflow" << std::endl;
+            return Data(-1 ,-1);
         }
         else {
-            heap.q.innerArray[0] = heap.q.innerArray[size()-1];
-            heap.q.pop_back();
+            heap.swap(heap.q.innerArray[0], heap.q.innerArray[size()-1]);
+            Data temp = heap.q.pop_back();
             heap.siftDown(0);
+            return temp;
         }
     }
     Data top() {
         if (heap.size() == 0){
-            std::cout << "Queue is empty" << std::endl;
-//            Data def(0, 0);
-            return heap.q.innerArray[0] = Data(0, 0);
+//            std::cout << "Queue is empty" << std::endl;
+            return heap.q.innerArray[0] = Data(-1, -1);
         }
         return heap.q.innerArray[0];
     }
