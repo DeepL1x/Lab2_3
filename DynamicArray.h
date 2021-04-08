@@ -66,7 +66,7 @@ struct DynamicArray{
 //        realsize++;
 //    }
 
-    void push_back(Data *el){
+    void push_back(const Data &el){
         if (realsize == capacity) {
             capacity *= alpha;
             Data *temp = new Data[capacity];
@@ -76,7 +76,7 @@ struct DynamicArray{
             delete [] innerArray;
             innerArray = temp;
         }
-        innerArray[realsize] = *el;
+        innerArray[realsize] = el;
         realsize++;
     }
 
