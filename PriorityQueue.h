@@ -26,7 +26,8 @@ struct PriorityQueue{
     Data top() {
         if (heap.size() == 0){
 //            std::cout << "Queue is empty" << std::endl;
-            return Data(-1, -1);
+            Data temp = Data(-1, -1);
+            return temp;
         }
         return heap.q.innerArray[0];
     }
