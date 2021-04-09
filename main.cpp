@@ -1,6 +1,6 @@
 #include <iostream>
-#include "TestFunc.h"
-
+#include "ASD2_Lab3_testPriorityQueue.h"
+#include <ctime>
 int main() {
     srand(time(NULL));
     testPriorityQueue();
