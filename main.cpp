@@ -1,8 +1,8 @@
 #include <iostream>
 #include "ASD2_Lab3_testPriorityQueue.h"
-#include <ctime>
+#include "TestHeapSort.h"
 int main() {
-    srand(time(NULL));
     testPriorityQueue();
+    testHeapSort();
     return 0;
 }

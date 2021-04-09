@@ -3,7 +3,7 @@
 #include <ctime>
 #include <iostream>
 #include "PriorityQueue.h"
-
+#include "ASD2_Lab3_testPriorityQueue.h"
 using namespace std;
 
 template <typename T>
@@ -84,3 +84,4 @@ bool testPriorityQueue()
     cerr << ":(" << endl << endl;
     return false;
 }
+

@@ -17,7 +17,7 @@ int MaxHeap::getLeftChild(int i) {
 }
 
 int MaxHeap::size() {
-    return q.size();
+    return array.size();
 }
 
 void MaxHeap::swap(Data &a, Data &b) {
@@ -27,8 +27,8 @@ void MaxHeap::swap(Data &a, Data &b) {
 }
 
 void MaxHeap::siftUp(int i) {
-    if(i > 0 && i < size() && q.innerArray[getParent(i)] < q.innerArray[i]) {
-        swap(q.innerArray[i], q.innerArray[getParent(i)]);
+    if(i > 0 && i < size() && array.innerArray[getParent(i)] < array.innerArray[i]) {
+        swap(array.innerArray[i], array.innerArray[getParent(i)]);
         siftUp(getParent(i));
     }
 }
@@ -36,11 +36,11 @@ void MaxHeap::siftUp(int i) {
 void MaxHeap::siftDown(int i) {
     if(i > -1 && getLeftChild(i) < size()) {
         int max = getLeftChild(i);
-        if (getRightChild(i) > 0 && getRightChild(i) < size() && q.innerArray[getLeftChild(i)] < q.innerArray[getRightChild(i)])
+        if (getRightChild(i) > 0 && getRightChild(i) < size() && array.innerArray[getLeftChild(i)] < array.innerArray[getRightChild(i)])
             max = getRightChild(i);
-        if (!(q.innerArray[i] < q.innerArray[max]))
+        if (!(array.innerArray[i] < array.innerArray[max]))
             return;
-        swap(q.innerArray[i], q.innerArray[max]);
+        swap(array.innerArray[i], array.innerArray[max]);
         siftDown(max);
     }
 }

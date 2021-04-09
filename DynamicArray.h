@@ -5,11 +5,9 @@
 #ifndef LAB2_3_DYNAMICARRAY_H
 #define LAB2_3_DYNAMICARRAY_H
 #include <cstdlib>
-
 struct Data {
     int cookingTime;
     int thinnessOfDough;
-
     bool operator < (const Data& aSecond) const;
     bool operator == (const Data& aSecond) const;
 
@@ -22,8 +20,7 @@ struct DynamicArray{
     int capacity;
     int realsize;
     Data* innerArray;
-    const int alpha = 2;
-
+//    int alpha = 2;
     DynamicArray();
 
     void push_front(Data *el);

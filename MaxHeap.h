@@ -6,7 +6,7 @@
 #define LAB2_3_MAXq_H
 #include "DynamicArray.h"
 struct MaxHeap{
-    DynamicArray q = DynamicArray();
+    DynamicArray array = DynamicArray();
 
     int getParent(int i);
 

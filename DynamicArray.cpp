@@ -5,7 +5,7 @@
 #include "DynamicArray.h"
 #include <iostream>
 #include <iomanip>
-
+#define alpha 2
 Data::Data() {
         cookingTime = rand() % 16;
         thinnessOfDough = rand() % 11;
