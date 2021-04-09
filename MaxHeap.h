@@ -8,51 +8,18 @@
 struct MaxHeap{
     DynamicArray q = DynamicArray();
 
-    int getParent(int i) {
-//        if (i == 0)
-//            return 0;
-        return (i - 1) / 2;
-    }
+    int getParent(int i);
 
-    int getRightChild(int i) {
-//        if (2 * i + 2 < size())
-            return 2 * i + 2;
-//        return -1;
-    }
+    int getRightChild(int i);
 
-    int getLeftChild(int i) {
-//        if (2 * i + 1 < size())
-            return 2 * i + 1;
-//        return -1;
-    }
+    int getLeftChild(int i);
 
-    int size(){
-        return q.size();
-    }
+    int size();
 
-    void swap (Data& a, Data& b){
-        Data temp = a;
-        a = b;
-        b = temp;
-    }
+    void swap (Data& a, Data& b);
 
-    void siftUp(int i) {
-        if(i > 0 && i < size() && q.innerArray[getParent(i)] < q.innerArray[i]) {
-            swap(q.innerArray[i], q.innerArray[getParent(i)]);
-            siftUp(getParent(i));
-        }
-    }
+    void siftUp(int i);
 
-    void siftDown(int i) {
-        if(i > -1 && getLeftChild(i) < size()) {
-            int max = getLeftChild(i);
-            if (getRightChild(i) > 0 && getRightChild(i) < size() && q.innerArray[getLeftChild(i)] < q.innerArray[getRightChild(i)])
-                max = getRightChild(i);
-            if (!(q.innerArray[i] < q.innerArray[max]))
-                return;
-            swap(q.innerArray[i], q.innerArray[max]);
-            siftDown(max);
-        }
-    }
+    void siftDown(int i);
 };
 #endif //LAB2_3_MAXq_H
