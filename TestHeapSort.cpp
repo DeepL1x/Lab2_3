@@ -42,7 +42,6 @@ void insertionSort(int* aArray, int aCapacity){
 void testHeapSortSpeed() {
     int* array = new int[capacity];
     int* temp = new int[capacity];
-    const int iters = 1000;
     for (int i = 0; i < capacity; ++i) {
         array[i] = 1 + rand() % 5000;
         temp[i] = array[i];

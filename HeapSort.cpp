@@ -3,7 +3,6 @@
 //
 
 #include "HeapSort.h"
-#include "MaxIntHeap.h"
 
 void siftDown(int aTop, MaxIntHeap& aHeap, int aBottom){
     if(aTop > -1 && aHeap.getLeftChild(aTop) < aBottom) {
@@ -14,7 +13,7 @@ void siftDown(int aTop, MaxIntHeap& aHeap, int aBottom){
         aHeap.array[aHeap.getLeftChild(aTop)] < aHeap.array[aHeap.getRightChild(aTop)])
             max = aHeap.getRightChild(aTop);
 
-        if (!(aHeap.array[aTop] < aHeap.array[max]))
+        if (aHeap.array[aTop] >= aHeap.array[max])
             return;
 
         aHeap.swap(aHeap.array[aTop], aHeap.array[max]);
